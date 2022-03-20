@@ -4,7 +4,8 @@
   --clr-black: #2f3640;
   --transition: 0.3s;
   --font-if: 'Indie flower', sans-serif;
-  --bgcolor: #e9f2f3;
+  --bgcolor: #fff2f2;
+  --bgcolor2: #ba8c92;
 }
 body{
   font-family: Arial, Helvetica, sans-serif;
@@ -22,14 +23,18 @@ img{
 }
 h1{
   font-family: var(--font-if);
-  font-size: 2rem;
+  font-size: 2.5rem;
+  text-transform: uppercase;
 }
 h2{
   font-family: var(--font-if);
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 .font-if{
   font-family: var(--font-if);
+}
+.txt-pink{
+  color: var(--clr-pink);
 }
 .btn-primary{
   background: var(--clr-pink);
@@ -67,7 +72,21 @@ header#header {
   width: 100%;
   top: 0;
   z-index: 2;
+  border-bottom: 2px solid var(--clr-pink);
 }
+.navbar-toggler {
+  border: none;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+.nav-link {
+  text-align: center;
+}
+.nav-link:hover {
+  color: var(--clr-pink)!important;
+}
+
 .card {
   border-radius: 15px;
   box-shadow: 0px 0px 20px 5px lightgrey;
@@ -76,13 +95,28 @@ header#header {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
+.card-title {
+  margin-bottom: 1rem;
+}
+.card-text {
+  text-align: left;
+}
+.card-footer small.text-muted {
+  color: #969696 !important;
+  font-weight: 600;
+}
 .card .card-footer {
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
 }
+.event-action {
+  width: 100%;
+}
+#main {
+  padding-top: 100px;
+}
 
 .top-section{
-  margin-top: 100px;
   background: #8db9a5;
   color: white;
 }
@@ -109,7 +143,7 @@ header#header {
   right: 0;
   width: 50%;
   background-size: cover;
-  background-position: right;
+  background-position: 70%;
   background-repeat: no-repeat;
 }
 .bg-image span {
@@ -121,13 +155,99 @@ header#header {
   background: linear-gradient(to right, rgb(141 185 165) 21%, rgba(110, 138, 153, 0) 100%);
 }
 
-.section.bgcolor {
+.bgcolor {
   background: var(--bgcolor);
+}
+.bgcolor2 {
+  background: var(--bgcolor2);
+  color: white;
+}
+
+.rea-picto img {
+  height: 6rem;
+  width: auto;
+}
+.rea-number{
+  font-size: 3rem;
+  line-height: 3rem;
+}
+
+.donation.card {
+  background: none;
+  border: none;
+  box-shadow: none;
+  width: 80%;
+  margin: auto;
+  cursor: pointer;
+}
+.donation.card:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #f6e6e8;
+  position: absolute;
+  z-index: -1;
+  border-radius: 20px;
+  transition: all .2s ease-in-out;
+}
+.donation .card-title {
+  font-size: 2rem;
+  width: min-content;
+  margin: auto;
+  border-radius: 50%;
+  background: white;
+  padding: 20px;
+  transition: all .2s ease-in-out;
+}
+.donation .card-body {
+  padding: 2rem;
+}
+
+.links-rs i:nth-child(-n+3) {
+  margin-right: 2rem;
+}
+.links-rs i {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.footer-menu li {
+  margin-bottom: 1rem;
+}
+footer {
+  background: #2b2b2b;
+  color: var(--clr-light-grey);
+}
+footer a {
+  color: var(--clr-light-grey);
+}
+footer a:hover{
+  color: white;
 }
 
 @media (min-width: 769px){
   .section{
     padding-top: 90px;
     padding-bottom: 90px;
+  }
+  .top-section-content {
+    width: 50%;
+    position: relative;
+  }
+  .donation.card:hover:after{
+    top: -20px;
+    left: -20px;
+    width: calc(100% + 40px);
+    height: calc(100% + 40px);
+  }
+  .donation.card:hover .card-title {
+    background: var(--clr-pink);
+    color: white;
+  }
+  #contactForm {
+    max-width: 60%;
+    margin: auto;
   }
 }
