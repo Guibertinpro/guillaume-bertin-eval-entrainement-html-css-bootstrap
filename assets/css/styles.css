@@ -1,8 +1,10 @@
 :root {
-  --clr-pink : #ec3856;
+  --clr-pink : #ff5a75;
   --clr-light-grey: #dfe4ea;
   --clr-black: #2f3640;
   --transition: 0.3s;
+  --font-if: 'Indie flower', sans-serif;
+  --bgcolor: #e9f2f3;
 }
 body{
   font-family: Arial, Helvetica, sans-serif;
@@ -15,12 +17,19 @@ a{
 ol, li{
   list-style: none;
 }
+img{
+  width: 100%;
+}
 h1{
-  font-family: 'Indie flower', sans-serif;
+  font-family: var(--font-if);
   font-size: 2rem;
 }
 h2{
-  font-size: 1.5rem;
+  font-family: var(--font-if);
+  font-size: 2rem;
+}
+.font-if{
+  font-family: var(--font-if);
 }
 .btn-primary{
   background: var(--clr-pink);
@@ -59,13 +68,38 @@ header#header {
   top: 0;
   z-index: 2;
 }
+.card {
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px 5px lightgrey;
+}
+.card .card-img-top {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.card .card-footer {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
 .top-section{
   margin-top: 100px;
+  background: #8db9a5;
+  color: white;
+}
+.top-section-btn {
+  margin-top: 40px;
 }
 .section{
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 70px;
+  padding-bottom: 70px;
   position: relative;
+}
+.top-section-content{
+  width: 100%;
+  position: relative;
+}
+.top-section-text {
+  width: 85%;
 }
 .bg-image{
   background-image: url('/assets/img/top-img.webp');
@@ -78,8 +112,17 @@ header#header {
   background-position: right;
   background-repeat: no-repeat;
 }
-.top-section-content{
-  max-width: 50%;
+.bg-image span {
+  position: absolute;
+  top: 0;
+  left: -40px;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(to right, rgb(141 185 165) 21%, rgba(110, 138, 153, 0) 100%);
+}
+
+.section.bgcolor {
+  background: var(--bgcolor);
 }
 
 @media (min-width: 769px){
