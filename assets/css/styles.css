@@ -1,5 +1,5 @@
 :root {
-  --clr-pink : #ff5a75;
+  --clr-pink : #eb4d67;
   --clr-light-grey: #dfe4ea;
   --clr-black: #2f3640;
   --transition: 0.3s;
@@ -59,9 +59,9 @@ h2{
   transition: var(--transition);
 }
 .btn-secondary:hover{
-  background: white;
-  color: var(--clr-black);
-  border: 2px solid var(--clr-black);
+  background: none;
+  color: white;
+  border: 2px solid white;
   transition: var(--transition);
 }
 .logo {
@@ -102,7 +102,7 @@ header#header {
   text-align: left;
 }
 .card-footer small.text-muted {
-  color: #969696 !important;
+  color: var(--clr-pink) !important;
   font-weight: 600;
 }
 .card .card-footer {
@@ -117,7 +117,7 @@ header#header {
 }
 
 .top-section{
-  background: #8db9a5;
+  background: #9da267;
   color: white;
 }
 .top-section-btn {
@@ -152,7 +152,30 @@ header#header {
   left: -40px;
   bottom: 0;
   width: 100%;
-  background: linear-gradient(to right, rgb(141 185 165) 21%, rgba(110, 138, 153, 0) 100%);
+  background: linear-gradient(to right, rgb(157 162 103) 21%, rgba(110, 138, 153, 0) 100%);
+}
+.top-section-events{
+  background: #198076;
+  color: white;
+}
+.bg-image-events{
+  background-image: url('/assets/img/portes-ouvertes.webp');
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  background-size: cover;
+  background-position: 70%;
+  background-repeat: no-repeat;
+}
+.bg-image-events span {
+  position: absolute;
+  top: 0;
+  left: -40px;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(to right, rgb(25 128 118) 21%, rgba(110, 138, 153, 0) 100%);
 }
 
 .bgcolor {
@@ -249,5 +272,8 @@ footer a:hover{
   #contactForm {
     max-width: 60%;
     margin: auto;
+  }
+  .footer-menu li{
+    margin-bottom: 0;
   }
 }
