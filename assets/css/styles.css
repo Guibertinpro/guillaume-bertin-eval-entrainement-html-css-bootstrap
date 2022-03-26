@@ -185,6 +185,9 @@ header#header {
   background: var(--bgcolor2);
   color: white;
 }
+.share {
+  cursor: pointer;
+}
 
 .rea-picto img {
   height: 6rem;
